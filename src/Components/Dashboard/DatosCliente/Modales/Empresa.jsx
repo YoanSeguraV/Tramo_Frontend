@@ -3,9 +3,9 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { InhabilitarEmpresa } from "../../../../Data/DatosCliente";
 
-function Empresa({ _id }) {
+function Empresa({ getid }) {
+  console.log(getid)
   const [data, setdata] = useState({
-    _id: _id,
     motivoInhabilitadoPJU: "",
   });
 
@@ -66,7 +66,7 @@ function Empresa({ _id }) {
                         title: "Inhabilitado Correctamente",
                         timer: "2000",
                       });
-                      button: InhabilitarEmpresa(data);
+                      button: InhabilitarEmpresa(data,getid);
                     }
                   });
                 }}

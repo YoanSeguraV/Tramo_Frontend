@@ -24,12 +24,12 @@ export const EmpresasHabilitadas = async () => {
 {
   /!*Inhabilitar Empresa  */;
 }
-export const InhabilitarEmpresa = async (data) => {
-  const { _id, motivoInhabilitadoPJU } = data;
+export const InhabilitarEmpresa = async (data,getid) => {
+  const { motivoInhabilitadoPJU } = data;
   console.log(data);
   try {
     const response = await axios.put(
-      `${URL}admin/datosClientesEmpresaHB/${_id}`,
+      `${URL}admin/datosClientesEmpresaHB/${getid}`,
       { motivoInhabilitadoPJU }
     );
     if (response.status === 200) {

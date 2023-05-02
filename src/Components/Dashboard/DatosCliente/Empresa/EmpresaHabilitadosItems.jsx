@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Empresa from "../Modales/Empresa";
 import ReactStarts from "react-stars";
 
 function EmpresaHabilitadosItems({ data }) {
+  const [getid, setgetid] = useState()
   return (
     <>
       {data.map(
@@ -38,7 +39,9 @@ function EmpresaHabilitadosItems({ data }) {
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
                   <b>Razon Social </b>
                 </p>
-                <p className="mb-0" style={{fontSize:"14px"}}>{razonSocialEmpresa}</p>
+                <p className="mb-0" style={{ fontSize: "14px" }}>
+                  {razonSocialEmpresa}
+                </p>
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
                   <b>Representante Legal </b>
                 </p>
@@ -78,6 +81,7 @@ function EmpresaHabilitadosItems({ data }) {
                       className="btn bg-red botones"
                       data-bs-toggle="modal"
                       data-bs-target="#motivo-inhabilitacion-o"
+                      onClick={()=>setgetid(_id)}
                     >
                       Inhabilitar
                     </button>
@@ -87,7 +91,7 @@ function EmpresaHabilitadosItems({ data }) {
             </tr>
             <tr className="border-none bg-white">
               <td className="bg-white">
-                <Empresa _id={_id} />
+                <Empresa getid={getid} />
               </td>
             </tr>
           </>
