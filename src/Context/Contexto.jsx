@@ -18,6 +18,8 @@ export const ServiceContextProvider = ({ children }) => {
   const [datosConductor, setDatosConductor] = useState([]);
   const [loadingconductor, setloadingconductor] = useState(false);
   const [loading, setloading] = useState(false);
+  const [clienteNombre, setclienteNombre] = useState("");
+
   const [datosConductorInhabilitado, setDatosConductorInhabilitado] = useState(
     []
   );
@@ -42,6 +44,8 @@ export const ServiceContextProvider = ({ children }) => {
         datosConductorInhabilitado,
         loadingconductor,
         loading,
+        clienteNombre, 
+        setclienteNombre
       }}
     >
       {children}

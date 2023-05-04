@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import {ServiceContextProvider} from './Context/Contexto'
 import App from "./App";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ServiceContextProvider>
   <BrowserRouter>

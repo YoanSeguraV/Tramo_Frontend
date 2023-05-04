@@ -10,6 +10,9 @@
 .Manifiesto .texto-largo{
     font-size: 9px;
 }
+.transformText{
+    text-transform: uppercase;
+  }
 
 
 .Manifiesto .subtitulos{

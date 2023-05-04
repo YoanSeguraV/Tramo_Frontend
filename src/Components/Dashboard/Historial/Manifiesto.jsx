@@ -1,24 +1,66 @@
 import logo from "../../../assets/icons/Logofin.png";
 import ministerio from "../../../assets/icons/ministerio.png";
-import codigo from "../../../assets/icons/codigo.png";
 import "./manifiesto.css";
 import { useParams } from "react-router-dom";
 import QRCode from "react-qr-code";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import numeroALetras from 'numero-a-letras';
+
+
+
+
+
 
 function Manifiesto() {
+  const [manifiesto, setmanifiesto] = useState({});
+  const [carga, setcarga] = useState({});
+  const [destinatario, setdestinatario] = useState({});
+  const [conductor, setconductor] = useState({});
+  const [vehiculo, setvehiculo] = useState({});
+  const [tenedor, settenedor] = useState({});
+  const [usuario, setusuario] = useState({});
+
+  const [propietario, setpropietario] = useState({});
+
   const { id } = useParams();
   useEffect(() => {
-    const imprimir = () => {
-      window.print();
+    const getManifiesto = async () => {
+      const { data } = await axios.get(
+        `https://backend-tramo.vercel.app/natural/verManifiesto/${id}`
+      );
+      setmanifiesto(data);
+      console.log(data);
+      const conductor = await data.pedido.id_conductor;
+      const carga = await data.pedido.carga;
+      const vehiculo = await data.vehiculo;
+      const tenedor = await data.tenedor;
+      const propietario = await data.propietario;
+      const destinatario = await data.pedido.destinatario;
+      const usuario = await data.usuario;
+      const observaciones = await data.pedido.descripcionUbicacion;
+      const valor = await data.pedido.costosViaje;
+      const pagoDescarga = await data.pedido.pagoDescarge;
+      const pagoCarga = await data.pedido.pagoCarga;
+
+      setconductor(conductor);
+      setcarga(carga);
+      setvehiculo(vehiculo);
+      settenedor(tenedor);
+      setpropietario(propietario);
+      setdestinatario(destinatario);
+      setcarga({ ...carga, valor, observaciones, pagoDescarga, pagoCarga });
+      setusuario(usuario);
     };
-    imprimir();
+    getManifiesto();
   }, []);
+  console.log(manifiesto);
+  console.log(carga);
 
   return (
     <>
-      <div className="p-3 Manifiesto ">
-        <table>
+      <div className="p-3 Manifiesto  transformText  ">
+        <table >
           <tr>
             <td colSpan={2}>
               <img src={logo} alt="" style={{ maxWidth: "120px" }} />
@@ -137,19 +179,25 @@ function Manifiesto() {
 
           <tr className="bordes">
             <td colSpan={2}>
-              <p> FRANCISCO FERNANDO PEREZ</p>
+              <p>
+                {propietario.nombrePRO}
+               <p className="mx-2">
+               {propietario.apellidoPRO}
+               </p>
+               
+              </p>
             </td>
             <td>
-              <p> 1059355806</p>
+              <p> {propietario.NroDocumentoPRO}</p>
             </td>
             <td colSpan={3}>
-              <p> CALLE 07 79 A-58</p>
+              <p>{propietario.DireccionResidenciaPRO}</p>
             </td>
             <td>
-              <p> 320 7699 9910</p>
+              <p>{propietario.NroTelefonoPRO}</p>
             </td>
             <td>
-              <p> POPÁYAN-CAUCA</p>
+              <p> {propietario.ciudadPRO}</p>
             </td>
           </tr>
           <tr className="bordes subtitulos">
@@ -181,28 +229,28 @@ function Manifiesto() {
 
           <tr className="bordes">
             <td>
-              <p>FGR75C</p>
+              <p>{vehiculo.placaVehiculo}</p>
             </td>
             <td>
-              <p>CHEVROLET</p>
+              <p>{vehiculo.marca}</p>
             </td>
             <td>
-              <p>676 S</p>
+              <p>{vehiculo.placasTrailer}</p>
             </td>
             <td>
-              <p>2</p>
+              <p>{vehiculo.numeroEjes}</p>
             </td>
             <td>
-              <p>4000KG</p>
+              <p>{vehiculo.pesoVacio} KG</p>
             </td>
             <td>
-              <p>545454545454544</p>
+              <p>{vehiculo.nroPoliza_ResponCivil}</p>
             </td>
             <td>
-              <p>SEGURO DE ESTADO</p>
+              <p>{vehiculo.numeroSOAT}</p>
             </td>
             <td>
-              <p>12/02/2025</p>
+              <p>{vehiculo.fechavencSOAT}</p>
             </td>
           </tr>
           <tr className="bordes subtitulos">
@@ -228,22 +276,22 @@ function Manifiesto() {
 
           <tr className="bordes">
             <td colSpan={2}>
-              <p>CARLOS HERNESTO MARTINEZ</p>
+              <p>{conductor.nombreCON}</p>
             </td>
             <td>
-              <p>100234569</p>
+              <p>{conductor.nroDocumentoCON}</p>
             </td>
             <td colSpan={2}>
-              <p>CRA 79 A-58</p>
+              <p>{conductor.DireccionResidenciaCON}</p>
             </td>
             <td>
-              <p>320 452 8976</p>
+              <p>{conductor.nroTelefonoCON}</p>
             </td>
             <td>
-              <p>11511245</p>
+              <p>{conductor.nroLicenciaCON}</p>
             </td>
             <td>
-              <p>POPÁYAN-CAUCA</p>
+              <p>{conductor.ciudadCON}</p>
             </td>
           </tr>
           <tr className="bordes subtitulos">
@@ -265,19 +313,21 @@ function Manifiesto() {
           </tr>
           <tr className="bordes">
             <td colSpan="2">
-              <p>CARLOS HERNESTO MARTINEZ</p>
+              <p>
+                {tenedor.nombreTE} {tenedor.apellidoTE}
+              </p>
             </td>
             <td>
-              <p>100234569</p>
+              <p>{tenedor.NroDocumentoTE}</p>
             </td>
             <td colSpan="2">
-              <p>CRA 79 A-58</p>
+              <p>{tenedor.DireccionResidenciaTE}</p>
             </td>
             <td>
-              <p>320 452 8976</p>
+              <p>{tenedor.NroTelefonoTE}</p>
             </td>
             <td colSpan="2">
-              <p>POPÁYAN-CAUCA</p>
+              <p>{tenedor.ciudadTE}</p>
             </td>
           </tr>
           <tr className="bordes subtitulos">
@@ -312,10 +362,10 @@ function Manifiesto() {
               <p>CANTIDAD</p>
             </td>
             <td>
-              <p>NATURALEZA</p>
+              <p>EMPAQUE</p>
             </td>
             <td>
-              <p>EMPAQUE-PRODUCTO TRANSPORTADO</p>
+              <p>PRODUCTO TRANSPORTADO</p>
             </td>
             <td>
               <p>CC/NIT NOMBRE/RAZÓN SOCIAL</p>
@@ -332,22 +382,32 @@ function Manifiesto() {
               <p>KILOGRAMOS</p>
             </td>
             <td>
-              <p>1000</p>
+              <p>{carga.cantidadAproximada *1000}</p>
             </td>
             <td>
-              <p>CARGA NORMAL</p>
+              <p>{carga.empaque}</p>
             </td>
             <td>
-              <p>PAQUETE-HIERROS Y ACERO</p>
+              <p>{carga.producto}</p>
             </td>
             <td>
-              <p>0234567892 Ferro Maquinas S.A.S</p>
+              <p>
+                {usuario.nroDocumentoPNA}
+                <p className="mx-1">
+                {usuario.nombrePNA}
+                </p>
+               
+              </p>
             </td>
             <td>
-              <p>0245484464 Maquinas Cauca S.A.S</p>
+              <p>
+                {destinatario.numeroIdentificacion}
+                {destinatario.nombreEntidad}
+                {destinatario.razonSocial}
+              </p>
             </td>
             <td>
-              <p>TRAMO S.A.S</p>
+              <p>SEGURO S.A.S</p>
             </td>
           </tr>
           <tr className="bordes subtitulos">
@@ -363,7 +423,7 @@ function Manifiesto() {
               <p className="subtitulos">VALOR TOTAL DEL VIAJE</p>
             </td>
             <td>
-              <p>649,456</p>
+              <p>{  (carga.valor) - ((carga.valor/100) + ((carga.valor*3.5)/100)) }</p>
             </td>
             <td rowSpan={2}>
               <p className="subtitulos">LUGAR</p>
@@ -378,18 +438,7 @@ function Manifiesto() {
               <p>02/09/2022</p>
             </td>
             <td colSpan={2} rowSpan={6}>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
-                repudiandae et quae dolores qui iste nemo, aperiam veritatis
-                dicta voluptatibus distinctio expedita voluptatum cum temporibus
-                saepe maiores? Doloremque, inventore reprehenderit.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                doloribus dolorum explicabo non molestias ex animi nostrum illum
-                sint optio. Quisquam officiis perferendis ipsum reiciendis
-                officia fuga nam, asperiores ut.
-              </p>
+              <p>{carga.observaciones}</p>
             </td>
           </tr>
           <tr className="bordes">
@@ -397,7 +446,7 @@ function Manifiesto() {
               <p className="subtitulos">RETENCIÓN EN LA FUENTE</p>
             </td>
             <td>
-              <p>6,456</p>
+              <p> {carga.valor/100}</p>
             </td>
           </tr>
 
@@ -406,10 +455,11 @@ function Manifiesto() {
               <p className="subtitulos">RETENCIÓN ICA</p>
             </td>
             <td>
-              <p>0</p>
+              <p>{(carga.valor*3.5)/100}</p>
             </td>
             <td colSpan={4} rowSpan={2}>
-              <p className="subtitulos">CARGO PAGADO POR:</p> <p>REMITENTE</p>
+              <p className="subtitulos">CARGO PAGADO POR:</p>{" "}
+              <p>{carga.pagoCarga}</p>
             </td>
           </tr>
 
@@ -418,7 +468,7 @@ function Manifiesto() {
               <p className="subtitulos">NETO A PAGAR</p>
             </td>
             <td>
-              <p>655,912</p>
+              <p> {carga.valor}</p>
             </td>
           </tr>
 
@@ -430,8 +480,8 @@ function Manifiesto() {
               <p>0</p>
             </td>
             <td colSpan={4} rowSpan={2}>
-              <p className="subtitulos">CARGO PAGADO POR:</p>{" "}
-              <p>DESTINATARIO</p>
+              <p className="subtitulos">DESCARGA PAGADA POR:</p>{" "}
+              <p>{carga.pagoDescarga}</p>
             </td>
           </tr>
 
@@ -440,7 +490,7 @@ function Manifiesto() {
               <p className="subtitulos">SALDO A PAGAR</p>
             </td>
             <td>
-              <p>655,912</p>
+              <p>{carga.valor}</p>
             </td>
           </tr>
 
@@ -450,7 +500,11 @@ function Manifiesto() {
                 <span className="subtitulos my-1">
                   VALOR A PAGAR EN LETRAS:
                 </span>{" "}
-                SEISCIENTOS CINCUENTA Y CINCO MIL NOVECIENTOS DOCE PESOS M/C
+                {/* {numeroALetras(carga.valor)} */}
+                {/* {num(500.000)} */}
+                {/* {numberToSpanishWords(carga.valor)} */}
+                {/* {num(carga.valor)} */}
+                {/* SEISCIENTOS CINCUENTA Y CINCO MIL NOVECIENTOS DOCE PESOS M/C */}
               </p>
             </td>
           </tr>
@@ -465,10 +519,10 @@ function Manifiesto() {
               <p>TRAMO S.A.S</p>
             </td>
             <td colSpan={3}>
-              <p>FIRMA Y HUELLA TITULAR MANIFIESTO</p>
+              <p>FIRMA Y CC TITULAR MANIFIESTO</p>
             </td>
             <td colSpan={3}>
-              <p>FIRMA Y HUELLA DEL CONDUCTOR</p>
+              <p>FIRMA Y CC DEL CONDUCTOR</p>
             </td>
           </tr>
         </table>
