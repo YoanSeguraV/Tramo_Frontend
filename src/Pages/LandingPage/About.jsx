@@ -2,7 +2,8 @@ import ilu2 from "../../assets/ilustraciones/ilustracion2.svg";
 import ilu3 from "../../assets/ilustraciones/ilustracion3.svg";
 import IntegrantesSlider from "./IntegrantesSlider";
 import IntegrantesSliderGrande from "./IntegrantesSliderGrande";
-import mision1 from "../../assets/ilustraciones/mision.jpg";
+import mision1 from "../../assets/ilustraciones/ilustracionmision.svg";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -93,7 +94,7 @@ function About() {
               <img
                 className=" img-fluid w-lg-75"
                 src={ilu2}
-                width="350"
+                width="370"
                 alt=""
               ></img>
             </div>
@@ -116,7 +117,7 @@ function About() {
                 src={ilu3}
                 alt=""
                 style={{
-                  maxWidth: "330px",
+                  maxWidth: "390px",
                   maxHeight: "540px",
                   marginTop: "-50px",
                 }}
