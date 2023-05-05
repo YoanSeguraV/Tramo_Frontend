@@ -5,12 +5,7 @@ import { useParams } from "react-router-dom";
 import QRCode from "react-qr-code";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import numeroALetras from 'numero-a-letras';
-
-
-
-
-
+import { NumeroALetras } from "./Num";
 
 function Manifiesto() {
   const [manifiesto, setmanifiesto] = useState({});
@@ -30,7 +25,6 @@ function Manifiesto() {
         `https://backend-tramo.vercel.app/natural/verManifiesto/${id}`
       );
       setmanifiesto(data);
-      console.log(data);
       const conductor = await data.pedido.id_conductor;
       const carga = await data.pedido.carga;
       const vehiculo = await data.vehiculo;
@@ -54,13 +48,11 @@ function Manifiesto() {
     };
     getManifiesto();
   }, []);
-  console.log(manifiesto);
-  console.log(carga);
 
   return (
     <>
       <div className="p-3 Manifiesto  transformText  ">
-        <table >
+        <table>
           <tr>
             <td colSpan={2}>
               <img src={logo} alt="" style={{ maxWidth: "120px" }} />
@@ -181,10 +173,7 @@ function Manifiesto() {
             <td colSpan={2}>
               <p>
                 {propietario.nombrePRO}
-               <p className="mx-2">
-               {propietario.apellidoPRO}
-               </p>
-               
+                <p className="mx-2">{propietario.apellidoPRO}</p>
               </p>
             </td>
             <td>
@@ -382,7 +371,7 @@ function Manifiesto() {
               <p>KILOGRAMOS</p>
             </td>
             <td>
-              <p>{carga.cantidadAproximada *1000}</p>
+              <p>{carga.cantidadAproximada * 1000}</p>
             </td>
             <td>
               <p>{carga.empaque}</p>
@@ -393,10 +382,7 @@ function Manifiesto() {
             <td>
               <p>
                 {usuario.nroDocumentoPNA}
-                <p className="mx-1">
-                {usuario.nombrePNA}
-                </p>
-               
+                <p className="mx-1">{usuario.nombrePNA}</p>
               </p>
             </td>
             <td>
@@ -423,7 +409,9 @@ function Manifiesto() {
               <p className="subtitulos">VALOR TOTAL DEL VIAJE</p>
             </td>
             <td>
-              <p>{  (carga.valor) - ((carga.valor/100) + ((carga.valor*3.5)/100)) }</p>
+              <p>
+                {carga.valor - (carga.valor / 100 + (carga.valor * 3.5) / 100)}
+              </p>
             </td>
             <td rowSpan={2}>
               <p className="subtitulos">LUGAR</p>
@@ -446,7 +434,7 @@ function Manifiesto() {
               <p className="subtitulos">RETENCIÓN EN LA FUENTE</p>
             </td>
             <td>
-              <p> {carga.valor/100}</p>
+              <p> {carga.valor / 100}</p>
             </td>
           </tr>
 
@@ -455,7 +443,7 @@ function Manifiesto() {
               <p className="subtitulos">RETENCIÓN ICA</p>
             </td>
             <td>
-              <p>{(carga.valor*3.5)/100}</p>
+              <p>{(carga.valor * 3.5) / 100}</p>
             </td>
             <td colSpan={4} rowSpan={2}>
               <p className="subtitulos">CARGO PAGADO POR:</p>{" "}
@@ -500,11 +488,7 @@ function Manifiesto() {
                 <span className="subtitulos my-1">
                   VALOR A PAGAR EN LETRAS:
                 </span>{" "}
-                {/* {numeroALetras(carga.valor)} */}
-                {/* {num(500.000)} */}
-                {/* {numberToSpanishWords(carga.valor)} */}
-                {/* {num(carga.valor)} */}
-                {/* SEISCIENTOS CINCUENTA Y CINCO MIL NOVECIENTOS DOCE PESOS M/C */}
+                {NumeroALetras(carga.valor)}
               </p>
             </td>
           </tr>

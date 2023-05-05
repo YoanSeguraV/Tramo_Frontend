@@ -16,7 +16,6 @@ function HistorialCards() {
   }, []);
   console.log(Historial);
 
-  // console.log(conductor)
   return (
     <>
       {Historial.map(({ usuario, pedidoManifesto }) => (
