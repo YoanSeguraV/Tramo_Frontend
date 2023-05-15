@@ -87,7 +87,7 @@ export const AppRouter = () => {
             {/* felipe segura */}
             <Route path="datosconductores" element={<DatosConductores />} />
             <Route path="datoscliente" element={<DatosCliente />} />
-            <Route path="datosclienteempresa" element={<DatosEmpresa />} />
+            <Route path="datosclientejuridico" element={<DatosEmpresa />} />
             {/* felipe dulcey */}
             <Route path="historial" element={<Historial />} />
 
