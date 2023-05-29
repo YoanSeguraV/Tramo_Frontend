@@ -77,9 +77,9 @@ function Login() {
               </form>
             </div>
           </div>
-          <div className="col-lg-6  p-3 contan1">
+          <div className="col-lg-6   contan1">
             <picture className="d-flex align-items-end justify-content-end mt-4">
-              <img src={login} width={"95%"} alt="" />
+              <img src={login} width={"100%"} alt="" />
             </picture>
           </div>
         </div>

@@ -8,7 +8,6 @@ import email from "../../assets/icons/email.svg";
 import celular from "../../assets/icons/telefono-inteligente.gif";
 import Preguntas from "./Preguntas";
 import { Link } from "react-router-dom";
-/* Impor Restaurar <Pagina></Pagina */
 import restaurar from "./VolverPosition.js";
 
 function Contact() {
