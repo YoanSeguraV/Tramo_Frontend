@@ -1,5 +1,5 @@
 import logo from "../assets/icons/horizontal.jpg";
-import login from "../assets/ilustraciones/login.png";
+import login from "../assets/ilustraciones/login.gif";
 import { useNavigate } from "react-router-dom";
 import "../css/styleAdmin.css";
 import { useState } from "react";
