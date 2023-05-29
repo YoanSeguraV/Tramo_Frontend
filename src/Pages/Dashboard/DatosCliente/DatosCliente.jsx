@@ -51,11 +51,11 @@ function DatosCliente() {
             className="btn bg-blue mx-2 d-flex justify-content-center align-items-center botones_cliente"
             type="submit"
             onClick={() => {
-              navigate("/dashboard/datosclienteEmpresa");
+              navigate("/dashboard/datosclientejuridico");
             }}
           >
             <img className="me-1" src={img_emp} alt="" style={{width:"20px"}}/>
-            Ver Cliente Empresa
+            Ver Cliente Juridico
           </button>
         </div>
 

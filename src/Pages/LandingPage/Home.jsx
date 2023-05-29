@@ -13,7 +13,7 @@ import company_4 from "../../assets/sponsor/company-4.png";
 import icon1 from "../../assets/icons/fast-performance.png";
 import icon2 from "../../assets/icons/prototype.png";
 import icon3 from "../../assets/icons/vector.png";
-import acerca from "../../assets/ilustraciones/acerca_nosotros_ilus.svg";
+import acerca from "../../assets/ilustraciones/acerca.png";
 import appstore from "../../assets/icons/app-store.png";
 import playstore from "../../assets/icons/google-play.png";
 
@@ -269,7 +269,7 @@ function Home() {
               <img
                 className="img-fluid acercaImg my-md-5  flotante"
                 src={acerca}
-                style={{maxWidth:"280px"}}
+                style={{maxWidth:"400px"}}
                 alt=""
               ></img>
             </div>
