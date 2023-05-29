@@ -400,7 +400,7 @@ function MasDatos({data}) {
                         data-bs-toggle="modal"
                         data-bs-target="#escribir-motivo-rechazo"
                       >
-                        Rechazar
+                       Cancelar conductor
                       </button>
                     </div>
                   </div>

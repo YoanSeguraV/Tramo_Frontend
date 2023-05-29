@@ -1,7 +1,7 @@
 import logo from "../../../assets/icons/Logofin.png";
 import ministerio from "../../../assets/icons/ministerio.png";
 import "./manifiesto.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import QRCode from "react-qr-code";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -511,6 +511,7 @@ function Manifiesto() {
           </tr>
         </table>
       </div>
+      <a href={location.href.pdf} className="btn btn-primary" download >Descargar</a>
     </>
   );
 }
