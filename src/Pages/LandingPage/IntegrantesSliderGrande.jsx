@@ -1,4 +1,5 @@
 import felipeD from "../../assets/Integrantes/Perfil_SF1-01.png";
+import carlos from "../../assets/Integrantes/Carlos_SF-01.png";
 
 import jhon from "../../assets/Integrantes/JhonSF.png";
 import felipeS from "../../assets/Integrantes/SeguraSF.png";
@@ -83,6 +84,7 @@ function IntegrantesSliderGrande() {
                   style={{ width: "18rem" }}
                 >
                   <img
+                            src={carlos}
                   
                     className="card-img-top m-auto d-block w-75"
                     alt="..."
