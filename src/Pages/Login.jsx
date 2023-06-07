@@ -1,5 +1,5 @@
 import logo from "../assets/icons/horizontal.jpg";
-import login from "../assets/ilustraciones/login.gif";
+import login from "../assets/ilustraciones/Camion-01.png";
 import { useNavigate } from "react-router-dom";
 import "../css/styleAdmin.css";
 import { useState } from "react";
@@ -25,7 +25,7 @@ function Login() {
 
   return (
     <div className="containerp  " style={{ height: "100vh" }}>
-      <div className="container w-75">
+      <div className="container w-75 shadow-login">
         <div className="row movil ">
           <div className="col-lg-6 colorlogin ">
             <div className="card-body p-md-2 mx-md-4 movilP ">
@@ -33,7 +33,7 @@ function Login() {
                 <a href="/">
                   <img
                     src={logo}
-                    style={{ width: "97%", marginBottom: "17%" }}
+                    style={{ width: "85%", marginBottom: "17%" }}
                     className="logo-empresa"
                     alt="logo"
                   />
@@ -77,9 +77,9 @@ function Login() {
               </form>
             </div>
           </div>
-          <div className="col-lg-6  p-3 contan1">
-            <picture className="d-flex align-items-end justify-content-end mt-4">
-              <img src={login} width={"95%"} alt="" />
+          <div className="col-lg-6  contan1 d-flex align-items-end justify-content-end">
+            <picture className="d-flex mb-4 justify-content-end ">
+              <img src={login} width={"100%"} alt="" />
             </picture>
           </div>
         </div>

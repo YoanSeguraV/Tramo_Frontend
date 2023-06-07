@@ -45,7 +45,7 @@ function DatosCliente() {
             }}
           >
             <img className="me-1" src={img_usu} alt="" style={{width:"20px"}}/>
-            Ver Cliente Natural
+            Persona Natural
           </button>
           <button
             className="btn bg-blue mx-2 d-flex justify-content-center align-items-center botones_cliente"
@@ -55,7 +55,7 @@ function DatosCliente() {
             }}
           >
             <img className="me-1" src={img_emp} alt="" style={{width:"20px"}}/>
-            Ver Cliente Juridico
+            Persona Juridica
           </button>
         </div>
 

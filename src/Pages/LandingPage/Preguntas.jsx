@@ -14,9 +14,9 @@ function Preguntas() {
                 En este apartado podras encontrar todas las preguntas frecuentes
                 que nuestros usuarios han echo con anterioridad. En caso de que
                 no encuentres lo que buscas, contactactanos pulsando{" "}
-                <Link href="./contactos.html">
+                <a href="#contacto">
                 aqui
-                </Link>
+                </a>
                 
               </p>
             </div>
@@ -125,7 +125,7 @@ function Preguntas() {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body text-secondary bg_azul">
-                      Los administradores de TRAMO se encaragn de verificar que cada solicitud que es enviada a la aplicacion, que los documentos de la persona se encuentren en regla igual que los documentos del vehiculo, despues de haber revisado y comprobar que se encuentren en regla, sera aprobado para que pueda prestar sus servicios.
+                      Los administradores de TRAMO se encargan de verificar que cada solicitud que es enviada a la aplicación, que los documentos de la persona se encuentren en regla igual que los documentos del vehiculo, despues de haber revisado y comprobar que se encuentren en regla, sera aprobado para que pueda prestar sus servicios.
                     </div>
                   </div>
                 </div>
@@ -152,7 +152,7 @@ function Preguntas() {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body text-secondary bg_azul">
-                      Hola, buenas tardes, si es posible escoger el veiculo, de acuerdo a tus nesecidades, y al ambiente geografico.
+                      Hola, buenas tardes, si es posible escoger el vehiculo de acuerdo a tus nesecidades, y al lugar geografico donde te encuentres.
                     </div>
                   </div>
                 </div>

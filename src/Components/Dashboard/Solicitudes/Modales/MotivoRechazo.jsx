@@ -35,7 +35,7 @@ function MotivoRechazo({_id}) {
               <div className="modal-content">
                 <div className="modal-header">
                   <h1 className="modal-title fs-5" id="staticBackdropLabel">
-                    Escriba el motivo del rechazo
+                    Escriba el motivo de cancelar solicitud
                   </h1>
                   <button
                     className="btn-close"
@@ -49,7 +49,7 @@ function MotivoRechazo({_id}) {
                     name="motivoRechazoCON"
                     id="respuesta-pqrs"
                     rows="10"
-                    placeholder='Motivo de rechazo...'
+                    placeholder='Motivo de cancelación...'
                     autoFocus
                     onChange={handleChange}
                   ></textarea>
@@ -59,7 +59,7 @@ function MotivoRechazo({_id}) {
                     type="button"
                     onClick={() => {
                       Swal.fire({
-                        title: "¿Seguro que desea rechazar la solicitud?",
+                        title: "¿Seguro que desea cancelar la solicitud?",
                         icon: "question",
                         showDenyButton: true,
                         denyButtonText: "No",
@@ -68,7 +68,7 @@ function MotivoRechazo({_id}) {
                         if (response.isConfirmed) {
                           Swal.fire({
                             icon: "success",
-                            title: "Rechazado Correctamente",
+                            title: "Cancelado Correctamente",
                           });
                           button: putSolicitudesRechazar(data);
                         }
@@ -76,7 +76,7 @@ function MotivoRechazo({_id}) {
                     }}
                     className="btn btn-primary"
                   >
-                    Confirmar Rechazo y enviar motivo
+                    Confirmar cancelación y enviar motivo
                   </button>
                 </div>
               </div>

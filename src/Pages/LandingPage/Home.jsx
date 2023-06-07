@@ -294,7 +294,7 @@ function Home() {
                 En este apartado podras encontrar todas las preguntas frecuentes
                 que nuestros usuarios han echo con anterioridad. En caso de que
                 no encuentres lo que buscas, contactactanos pulsando{" "}
-                <a href="./contactos.html">aqui</a>
+                <Link to="/contactos#contacto">aqui</Link>
               </p>
             </div>
           </div>
@@ -443,8 +443,7 @@ function Home() {
                       aria-controls="collapse5"
                     >
                       <span className="mb-0 fs-6 text-start fw-bold  dark">
-                        Tengo la posibilidad de escoger el vehiculo de acuerdo a
-                        mis nesecidades?
+                      Tengo la posibilidad de escoger el vehiculo de acuerdo a mis nesecidades?
                       </span>
                     </button>
                   </h2>
@@ -455,8 +454,8 @@ function Home() {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body text-secondary bg_azul">
-                      Hola, buenas tardes, si es posible escoger el veiculo, de
-                      acuerdo a tus nesecidades, y al ambiente geografico.
+                    Hola, buenas tardes, si es posible escoger el vehiculo de acuerdo a tus nesecidades, y al lugar geografico donde te encuentres.
+    
                     </div>
                   </div>
                 </div>

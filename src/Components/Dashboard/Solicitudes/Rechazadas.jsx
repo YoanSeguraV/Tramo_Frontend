@@ -23,7 +23,7 @@ function Solicitudes() {
               <h4 className="text-light d-flex align-items-center">
                 {" "}
                 <img className="imagen-titulo" src={img_rec} alt="" />{" "}
-                Solicitudes Rechazadas
+                Solicitudes Canceladas
               </h4>
             </div>
           </div>

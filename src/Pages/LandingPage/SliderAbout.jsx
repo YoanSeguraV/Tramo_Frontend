@@ -14,7 +14,7 @@ function SliderAbout() {
           <div className="carousel-inner  ">
             <div className="carousel-item active">
               <img
-                src={fondo1}
+                src={fondo3}
                 className="d-block w-100 espacios "
                 style={{ maxHeight: "94vh" }}
                 alt="..."
@@ -30,7 +30,7 @@ function SliderAbout() {
             </div>
             <div className="carousel-item">
               <img
-                src={fondo3}
+                src={fondo1}
                 className="d-block w-100"
                 style={{ maxHeight: "94vh" }}
                 alt="..."

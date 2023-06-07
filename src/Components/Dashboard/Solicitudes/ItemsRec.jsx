@@ -82,7 +82,7 @@ function ItemsRec({ SolicitudesRechazadas }) {
               <div className="mt-2">
                 <button
                   className="btn bg-red btn-mas-datos botones"
-                  style={{ opacity: "90%" }}
+                  style={{ opacity: "90%", fontSize:"14px" }}
                   data-bs-toggle="modal"
                   data-bs-target="#motivo-rechazo"
                   onClick={() => {
@@ -91,7 +91,7 @@ function ItemsRec({ SolicitudesRechazadas }) {
                     setapellidoCON(conductor.apellidoCON);
                   }}
                 >
-                  Motivo De Rechazo
+                  Motivo Cancelación
                 </button>
               </div>
             </div>

@@ -1,8 +1,8 @@
-import felipeD from "../../assets/Integrantes/Perfil_SF.png";
+import felipeD from "../../assets/Integrantes/Perfil_SF1-01.png";
 
 import jhon from "../../assets/Integrantes/JhonSF.png";
 import felipeS from "../../assets/Integrantes/SeguraSF.png";
-import carlos from "../../assets/Integrantes/carlosNoguera.jpg";
+import carlos from "../../assets/Integrantes/carlos_SF-01.png";
 import yonathan from "../../assets/Integrantes/YonatanSF.png";
 import hernan from "../../assets/Integrantes/HernanSF2.png";
 import facebook from "../../assets/icons/facebook.svg";
@@ -14,7 +14,7 @@ function IntegrantesSliderGrande() {
   return (
     <>
       {/* <!-- Slider de Integrantes --> */}
-      <div className="container-fluid  font">
+      <div id="desarrolladores" className="container-fluid  font">
         <h6 className="text-center mt-5 fw-bold fs-2 dark">INTEGRANTES</h6>
         {/* <!-- Carrusell Para pantalla Grande --> */}
         <div className="d-flex justify-content-center bg-white d-none d-md-block carousel-grande">
@@ -26,7 +26,7 @@ function IntegrantesSliderGrande() {
             <div className="carousel-inner px-5">
               {/* <!-- Primer Equipo --> */}
               <div className="carousel-item active text-center d-flex  justify-content-center  w-100">
-              <div
+                <div
                   className="card card-integrantes my-5"
                   style={{ width: "18rem" }}
                 >
@@ -40,39 +40,39 @@ function IntegrantesSliderGrande() {
                     <h6 className="">Scrum Master</h6>
                     <ul className="d-flex redes-integrantes justify-content-center">
                       <li>
-                        <Link className=" bg-yellow wasap" target="_blank" href="">
-                        <img
+                        <a
+                          className=" bg-yellow wasap"
+                          target={"_blank"}
+                          href="https://api.whatsapp.com/send?phone=573226178911"
+                        >
+                          <img
                             src={wasap}
                             className=" p-2 rounded mb-2"
                             alt=""
                           />
-                        </Link>
-                        
+                        </a>
                       </li>
                       <li>
-                        <Link
-                         className=" bg-yellow instagram"
-                         target="_blank"
-                         href="https://www.instagram.com/felipe_dullcey/"
+                        <a
+                          className=" bg-yellow  instagram"
+                          target={"_blank"}
+                          href="https://www.instagram.com/felipe_dullcey/"
                         >
-                           <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                        </Link>
-                        
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                        </a>
                       </li>
                       <li>
-                        <Link
-                        className=" bg-yellow facebook"
-                        target="_blank"
-                        href="https://www.facebook.com/felipe.dullcey/"
-                        
+                        <a
+                          className=" bg-yellow facebook"
+                          target={"_blank"}
+                          href="https://web.facebook.com/felipe.dullcey/"
                         >
-                           <img
+                          <img
                             src={facebook}
                             className=" p-2 rounded mb-2"
                             alt=""
                           />
-                        </Link>
-                       
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -92,43 +92,43 @@ function IntegrantesSliderGrande() {
                     <h6 className="">Product Owner</h6>
                     <ul className="d-flex redes-integrantes justify-content-center">
                       <li>
-                        <Link className=" bg-yellow wasap" target="_blank" href="">
-                        <img
+                        <a
+                          className=" bg-yellow wasap"
+                          target="_blank"
+                          href="https://api.whatsapp.com/send?phone=573011800105"
+                        >
+                          <img
                             src={wasap}
                             className=" p-2 rounded mb-2"
                             alt=""
                           />
-                        </Link>
-                       
+                        </a>
                       </li>
                       <li>
-                        <Link
-                         className=" bg-yellow instagram"
-                         target="_blank"
-                         href="https://www.instagram.com/krlos_nc/"
+                        <a
+                          className=" bg-yellow instagram"
+                          target="_blank"
+                          href="https://www.instagram.com/krlos_nc/"
                         >
-                           <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                        </Link>
-                        
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                        </a>
                       </li>
                       <li>
-                        <Link
-                         className=" bg-yellow facebook"
-                         target="_blank"
-                         href="https://www.facebook.com/robertocarlos.nogueracordoba"
+                        <a
+                          className=" bg-yellow facebook"
+                          target="_blank"
+                          href="https://www.facebook.com/robertocarlos.nogueracordoba"
                         >
                           <img
                             src={facebook}
                             className=" p-2 rounded mb-2"
                             alt=""
                           />
-                        </Link>
-                       
+                        </a>
                       </li>
                     </ul>
-             
-                
-                           </div>
+                          {" "}
+                  </div>
                 </div>
               </div>
 
@@ -148,29 +148,29 @@ function IntegrantesSliderGrande() {
                     <h6 className="">Full Stack Developer</h6>
                     <ul className="d-flex redes-integrantes justify-content-center">
                       <li>
-                        <Link
+                        <a
                           className=" bg-yellow wasap"
                           target="_blank"
-                          href=""
+                          href="https://api.whatsapp.com/send?phone=573112474569"
                         >
                           <img
                             src={wasap}
                             className=" p-2 rounded mb-2"
                             alt=""
                           />
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
+                        <a
                           className=" bg-yellow instagram"
                           target="_blank"
-                          href=""
+                          href="https://www.instagram.com/felipesegura1826/"
                         >
                           <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
+                        <a
                           className=" bg-yellow facebook"
                           target="_blank"
                           href="https://www.facebook.com/felipesegura0"
@@ -180,7 +180,7 @@ function IntegrantesSliderGrande() {
                             className=" p-2 rounded mb-2"
                             alt=""
                           />
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -200,29 +200,29 @@ function IntegrantesSliderGrande() {
                     <h6 className="">Full Stack Developer</h6>
                     <ul className="d-flex redes-integrantes justify-content-center">
                       <li>
-                        <Link
+                        <a
                           className=" bg-yellow wasap"
                           target="_blank"
-                          href=""
+                          href="https://api.whatsapp.com/send?phone=573156376672"
                         >
                           <img
                             src={wasap}
                             className=" p-2 rounded mb-2"
                             alt=""
                           />
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
+                        <a
                           className=" bg-yellow instagram"
                           target="_blank"
-                          href=""
+                          href="https://www.instagram.com/jhonshurtado/"
                         >
                           <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
+                        <a
                           className=" bg-yellow facebook"
                           target="_blank"
                           href="https://www.facebook.com/jhon.xat2"
@@ -232,7 +232,7 @@ function IntegrantesSliderGrande() {
                             className=" p-2 rounded mb-2"
                             alt=""
                           />
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -255,29 +255,29 @@ function IntegrantesSliderGrande() {
                     <h6 className="">Full Stack Developer</h6>
                     <ul className="d-flex redes-integrantes justify-content-center">
                       <li>
-                        <Link
+                        <a
                           className=" bg-yellow wasap"
                           target="_blank"
-                          href=""
+                          href="https://api.whatsapp.com/send?phone=573182268916"
                         >
                           <img
                             src={wasap}
                             className=" p-2 rounded mb-2"
                             alt=""
                           />
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
+                        <a
                           className=" bg-yellow instagram"
                           target="_blank"
                           href=""
                         >
                           <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
+                        <a
                           className=" bg-yellow facebook"
                           target="_blank"
                           href="https://www.facebook.com/Yonatan.suarez08"
@@ -287,7 +287,7 @@ function IntegrantesSliderGrande() {
                             className=" p-2 rounded mb-2"
                             alt=""
                           />
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -307,29 +307,29 @@ function IntegrantesSliderGrande() {
                     <h6 className="">Full Stack Developer</h6>
                     <ul className="d-flex redes-integrantes justify-content-center">
                       <li>
-                        <Link
+                        <a
                           className=" bg-yellow wasap"
                           target="_blank"
-                          href=""
+                          href="https://api.whatsapp.com/send?phone=573107425878"
                         >
                           <img
                             src={wasap}
                             className=" p-2 rounded mb-2"
                             alt=""
                           />
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
+                        <a
                           className=" bg-yellow instagram"
                           target="_blank"
                           href=""
                         >
                           <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
+                        <a
                           className=" bg-yellow facebook"
                           target="_blank"
                           href="https://www.facebook.com/hernandario.zuniga.79"
@@ -339,7 +339,7 @@ function IntegrantesSliderGrande() {
                             className=" p-2 rounded mb-2"
                             alt=""
                           />
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </div>

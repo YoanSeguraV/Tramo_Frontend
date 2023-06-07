@@ -1,8 +1,8 @@
-import felipeD from "../../assets/Integrantes/Perfil_SF.png";
+import felipeD from "../../assets/Integrantes/Perfil_SF1-01.png";
 
 import jhon from "../../assets/Integrantes/JhonSF.png";
 import felipeS from "../../assets/Integrantes/SeguraSF.png";
-import carlos from "../../assets/Integrantes/carlosNoguera.jpg";
+import carlos from "../../assets/Integrantes/carlos_SF-01.png";
 import yonathan from "../../assets/Integrantes/YonatanSF.png";
 import hernan from "../../assets/Integrantes/HernanSF2.png";
 import facebook from "../../assets/icons/facebook.svg";
@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 function IntegrantesSlider() {
   return (
     <>
-      <div className="d-flex justify-content-center bg-white d-md-none carousel-pequeño font">
+      <div id="desarrolladores" className="d-flex justify-content-center bg-white d-md-none carousel-pequeño font">
         <div
           id="carouselExampleFade2"
           className="carousel carousel-dark slide carousel-fade w-100 my-5"
@@ -35,35 +35,35 @@ function IntegrantesSlider() {
                   <h6 className="font">Scrum Master</h6>
                   <ul className="d-flex redes-integrantes justify-content-center">
                     <li>
-                      <Link
+                      <a
                         className=" bg-yellow wasap"
                         target={"_blank"}
-                        href=""
+                        href="https://api.whatsapp.com/send?phone=573226178911"
                       >
                         <img src={wasap} className=" p-2 rounded mb-2" alt="" />
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link
+                      <a
                         className=" bg-yellow  instagram"
                         target={"_blank"}
-                        href=""
+                        href="https://www.instagram.com/felipe_dullcey/"
                       >
                         <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link
+                      <a
                         className=" bg-yellow facebook"
                         target={"_blank"}
-                        href=""
+                        href="https://web.facebook.com/felipe.dullcey/"
                       >
                         <img
                           src={facebook}
                           className=" p-2 rounded mb-2"
                           alt=""
                         />
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -83,37 +83,41 @@ function IntegrantesSlider() {
                   <h5 className="card-title">Carlos Noguera Cordoba</h5>
                   <h6 className="font">Product Owner</h6>
                   <ul className="d-flex redes-integrantes justify-content-center">
-                    <li>
-                      <Link
-                        className=" bg-yellow wasap"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img src={wasap} className=" p-2 rounded mb-2" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className=" bg-yellow instagram"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className=" bg-yellow facebook"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img
-                          src={facebook}
-                          className=" p-2 rounded mb-2"
-                          alt=""
-                        />
-                      </Link>
-                    </li>
+                  <li>
+                        <a
+                          className=" bg-yellow wasap"
+                          target="_blank"
+                          href="https://api.whatsapp.com/send?phone=573011800105"
+                        >
+                          <img
+                            src={wasap}
+                            className=" p-2 rounded mb-2"
+                            alt=""
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className=" bg-yellow instagram"
+                          target="_blank"
+                          href="https://www.instagram.com/krlos_nc/"
+                        >
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className=" bg-yellow facebook"
+                          target="_blank"
+                          href="https://www.facebook.com/robertocarlos.nogueracordoba"
+                        >
+                          <img
+                            src={facebook}
+                            className=" p-2 rounded mb-2"
+                            alt=""
+                          />
+                        </a>
+                      </li>
                   </ul>
                 </div>
               </div>
@@ -133,37 +137,41 @@ function IntegrantesSlider() {
                   <h5 className="card-title">Felipe Segura Villamarin</h5>
                   <h6 className="font">Full Stack Developer</h6>
                   <ul className="d-flex redes-integrantes justify-content-center">
-                    <li>
-                      <Link
-                        className=" bg-yellow wasap"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img src={wasap} className=" p-2 rounded mb-2" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className=" bg-yellow instagram"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className=" bg-yellow facebook"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img
-                          src={facebook}
-                          className=" p-2 rounded mb-2"
-                          alt=""
-                        />
-                      </Link>
-                    </li>
+                  <li>
+                        <a
+                          className=" bg-yellow wasap"
+                          target="_blank"
+                          href="https://api.whatsapp.com/send?phone=573112474569"
+                        >
+                          <img
+                            src={wasap}
+                            className=" p-2 rounded mb-2"
+                            alt=""
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className=" bg-yellow instagram"
+                          target="_blank"
+                          href="https://www.instagram.com/felipesegura1826/"
+                        >
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className=" bg-yellow facebook"
+                          target="_blank"
+                          href="https://www.facebook.com/felipesegura0"
+                        >
+                          <img
+                            src={facebook}
+                            className=" p-2 rounded mb-2"
+                            alt=""
+                          />
+                        </a>
+                      </li>
                   </ul>
                 </div>
               </div>
@@ -182,37 +190,41 @@ function IntegrantesSlider() {
                   <h5 className="card-title">Jhon Sebastian Hurtado</h5>
                   <h6 className="font">Full Stack Developer</h6>
                   <ul className="d-flex redes-integrantes justify-content-center">
-                    <li>
-                      <Link
-                        className=" bg-yellow wasap"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img src={wasap} className=" p-2 rounded mb-2" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className=" bg-yellow instagram"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className=" bg-yellow facebook"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img
-                          src={facebook}
-                          className=" p-2 rounded mb-2"
-                          alt=""
-                        />
-                      </Link>
-                    </li>
+                  <li>
+                        <a
+                          className=" bg-yellow wasap"
+                          target="_blank"
+                          href="https://api.whatsapp.com/send?phone=573156376672"
+                        >
+                          <img
+                            src={wasap}
+                            className=" p-2 rounded mb-2"
+                            alt=""
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className=" bg-yellow instagram"
+                          target="_blank"
+                          href="https://www.instagram.com/jhonshurtado/"
+                        >
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className=" bg-yellow facebook"
+                          target="_blank"
+                          href="https://www.facebook.com/jhon.xat2"
+                        >
+                          <img
+                            src={facebook}
+                            className=" p-2 rounded mb-2"
+                            alt=""
+                          />
+                        </a>
+                      </li>
                   </ul>
                 </div>
               </div>
@@ -232,37 +244,41 @@ function IntegrantesSlider() {
                   <h5 className="card-title">Yonatan David Pechene</h5>
                   <h6 className="font">Full Stack Developer</h6>
                   <ul className="d-flex redes-integrantes justify-content-center">
-                    <li>
-                      <Link
-                        className=" bg-yellow wasap"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img src={wasap} className=" p-2 rounded mb-2" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className=" bg-yellow instagram"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className=" bg-yellow facebook"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img
-                          src={facebook}
-                          className=" p-2 rounded mb-2"
-                          alt=""
-                        />
-                      </Link>
-                    </li>
+                  <li>
+                        <a
+                          className=" bg-yellow wasap"
+                          target="_blank"
+                          href="https://api.whatsapp.com/send?phone=573182268916"
+                        >
+                          <img
+                            src={wasap}
+                            className=" p-2 rounded mb-2"
+                            alt=""
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className=" bg-yellow instagram"
+                          target="_blank"
+                          href=""
+                        >
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className=" bg-yellow facebook"
+                          target="_blank"
+                          href="https://www.facebook.com/Yonatan.suarez08"
+                        >
+                          <img
+                            src={facebook}
+                            className=" p-2 rounded mb-2"
+                            alt=""
+                          />
+                        </a>
+                      </li>
                   </ul>
                 </div>
               </div>
@@ -281,37 +297,41 @@ function IntegrantesSlider() {
                   <h5 className="card-title">Hernan Dario Zuñiga</h5>
                   <h6 className="font">Full Stack Developer</h6>
                   <ul className="d-flex redes-integrantes justify-content-center">
-                    <li>
-                      <Link
-                        className=" bg-yellow wasap"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img src={wasap} className=" p-2 rounded mb-2" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className=" bg-yellow instagram"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className=" bg-yellow facebook"
-                        target={"_blank"}
-                        href=""
-                      >
-                        <img
-                          src={facebook}
-                          className=" p-2 rounded mb-2"
-                          alt=""
-                        />
-                      </Link>
-                    </li>
+                  <li>
+                        <a
+                          className=" bg-yellow wasap"
+                          target="_blank"
+                          href="https://api.whatsapp.com/send?phone=573107425878"
+                        >
+                          <img
+                            src={wasap}
+                            className=" p-2 rounded mb-2"
+                            alt=""
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className=" bg-yellow instagram"
+                          target="_blank"
+                          href=""
+                        >
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className=" bg-yellow facebook"
+                          target="_blank"
+                          href="https://www.facebook.com/hernandario.zuniga.79"
+                        >
+                          <img
+                            src={facebook}
+                            className=" p-2 rounded mb-2"
+                            alt=""
+                          />
+                        </a>
+                      </li>
                   </ul>
                 </div>
               </div>

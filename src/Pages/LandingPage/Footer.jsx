@@ -66,44 +66,63 @@ function Footer() {
               <img src={negativo} style={{ width: "50%" }}></img>
               <ul className="footer__list my-4 text-center">
                 <li className="footer__list-item me-2">
-                  <Link to="" className="footer__list-link">
+                  <a
+                    target="_blank"
+                    href="https://web.facebook.com/profile.php?id=100093163430662"
+                    className="footer__list-link"
+                  >
                     <img
                       src={facebook}
                       width="24px"
                       className="ms-2"
                       alt=""
                     ></img>
-                  </Link>
+                  </a>
                 </li>
                 <li className="footer__list-item me-2">
-                  <Link href="#" className="footer__list-link">
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/tramo_oficial/"
+                    className="footer__list-link"
+                  >
                     <img src={ins} width="24px" className="ms-2" alt=""></img>
-                  </Link>
+                  </a>
                 </li>
                 <li className="footer__list-item me-2">
-                  <Link href="#" className="footer__list-link">
+                  <a
+                    target="_blank"
+                    href="https://twitter.com/Tramo_oficial"
+                    className="footer__list-link"
+                  >
                     <img
                       src={twitter}
                       width="24px"
                       className="ms-2"
                       alt=""
                     ></img>
-                  </Link>
+                  </a>
                 </li>
-                <li className="footer__list-item me-2">
-                  <Link href="#" className="footer__list-link">
+                <li target="_blank" className="footer__list-item me-2">
+                  <a
+                    href="https://api.whatsapp.com/send?phone=573226178911"
+                    className="footer__list-link"
+                  >
                     <img src={wasap} width="24px" className="ms-2" alt=""></img>
-                  </Link>
+                  </a>
                 </li>
                 <li className="footer__list-item me-2">
-                  <Link href="#" className="footer__list-link">
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/@Tramo_oficial"
+                    className="footer__list-link"
+                  >
                     <img
                       src={youtube}
                       width="24px"
                       className="ms-2"
                       alt=""
                     ></img>
-                  </Link>
+                  </a>
                 </li>
               </ul>
               <div className="eslogan-footeer mt-3">
@@ -144,7 +163,10 @@ function Footer() {
                 </li>
                 <li className="footer__list-item">
                   <img src={back} alt=""></img>
-                  <Link to={"/about"} className="footer__list-link ms-3">
+                  <Link
+                    to={"/about#desarrolladores"}
+                    className="footer__list-link ms-3"
+                  >
                     Desarrolladores
                   </Link>
                 </li>
@@ -156,29 +178,45 @@ function Footer() {
               <ul className="footer__list">
                 <li className="footer__list-item">
                   <img src={geo} alt=""></img>
-                  <Link href="" className="footer__list-link ms-1">
+                  <a
+                    target="_blank"
+                    href="https://goo.gl/maps/VLJwizZzytx5hg918"
+                    className="footer__list-link ms-1"
+                  >
                     Crra 5 #6-67 CTPI SENA Norte
-                  </Link>
+                  </a>
                 </li>
                 <li className="footer__list-item">
                   <img src={email} alt=""></img>
 
-                  <Link href="" className="footer__list-link ms-1">
-                    TramoAdmin@gmail.com
-                  </Link>
+                  <a
+                    target="_blank"
+                    href="mailto:Tramosas2023@gmail.com"
+                    className="footer__list-link ms-1"
+                  >
+                    Tramosas2023@gmail.com
+                  </a>
                 </li>
                 <li className="footer__list-item">
                   <img src={telefono} alt=""></img>
-                  <Link href="" className="footer__list-link ms-1">
-                    +57 3235234567
-                  </Link>
+                  <a
+                    target="_blank"
+                    href="https://api.whatsapp.com/send?phone=573226178911"
+                    className="footer__list-link ms-1"
+                  >
+                    +57 3226178911
+                  </a>
                 </li>
                 <li className="footer__list-item">
                   <img src={telefono} alt=""></img>
 
-                  <Link href="" className="footer__list-link ms-1">
-                    +57 3235234567
-                  </Link>
+                  <a
+                    target="_blank"
+                    href="https://api.whatsapp.com/send?phone=573011800105"
+                    className="footer__list-link ms-1"
+                  >
+                    +57 3011800105
+                  </a>
                 </li>
               </ul>
             </div>

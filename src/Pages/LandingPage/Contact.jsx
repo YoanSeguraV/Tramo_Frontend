@@ -12,10 +12,8 @@ import { Link } from "react-router-dom";
 import restaurar from "./VolverPosition.js";
 
 function Contact() {
+  restaurar();
 
-  restaurar()
-
-  
   return (
     <>
       <section id="faq pb-sm-5 container my-5 mt-5">
@@ -28,7 +26,7 @@ function Contact() {
 
       <div className="d-flex justify-content-center align-items-end mt-5">
         <img src={celular} alt="" width="68px" height="68px"></img>
-        <h1 className="fw-bold fs-2 dark lh-sm align-items-end font">
+        <h1 className="fw-bold fs-2 dark lh-sm align-items-end font" id="contacto">
           Contactanos
         </h1>
       </div>
@@ -68,62 +66,74 @@ function Contact() {
                       <div>
                         <ul className="iconos-form divicons">
                           <li className="form__list-item ">
-
-                            <Link  href="#" className="form__list-link">
-                            <img
+                            <a
+                              target="_blank"
+                              href="https://web.facebook.com/profile.php?id=100093163430662"
+                              className="form__list-link"
+                            >
+                              <img
                                 src={facebook}
                                 width="24px"
                                 className="mx-2"
                                 alt=""
                               ></img>
-                            </Link>
-                            
+                            </a>
                           </li>
                           <li className="form__list-item me-2">
-                            <Link  href="#" className="form__list-link">
-                            <img
+                            <a
+                              target="_blank"
+                              href="https://www.instagram.com/tramo_oficial/"
+                              className="form__list-link"
+                            >
+                              <img
                                 src={ins}
                                 width="24px"
                                 className="ms-2"
                                 alt=""
                               ></img>
-                            </Link>
-                            
+                            </a>
                           </li>
                           <li className="form__list-item me-2">
-                            <Link  href="#" className="form__list-link">
-                            <img
+                            <a
+                              target="_blank"
+                              href="https://twitter.com/Tramo_oficial"
+                              className="form__list-link"
+                            >
+                              <img
                                 src={twitter}
                                 width="24px"
                                 className="ms-2"
                                 alt=""
                               ></img>
-                            </Link>
-                           
+                            </a>
                           </li>
                           <li className="form__list-item me-2">
-
-                            <Link href="#" className="form__list-link">
-                            <img
+                            <a
+                              target="_blank"
+                              href="https://api.whatsapp.com/send?phone=573226178911"
+                              className="form__list-link"
+                            >
+                              <img
                                 src={wasap}
                                 width="24px"
                                 className="ms-2"
                                 alt=""
                               ></img>
-                            </Link>
-                           
+                            </a>
                           </li>
                           <li className="form__list-item me-2">
-
-                            <Link  href="#" className="form__list-link">
-                            <img
+                            <a
+                              target="_blank"
+                              href="https://www.youtube.com/@Tramo_oficial"
+                              className="form__list-link"
+                            >
+                              <img
                                 src={youtube}
                                 width="24px"
                                 className="ms-2"
                                 alt=""
                               ></img>
-                            </Link>
-                           
+                            </a>
                           </li>
                         </ul>
                       </div>
@@ -133,10 +143,28 @@ function Contact() {
                         <ul className="footer__list">
                           <li className="footer__list-item">
                             <img src={email} alt=""></img>
-                            <Link  href="" className="colortxt footer__list-link ms-1">
-                            TramoAdmin@gmail.com
-                            </Link>
-                           
+                            <a
+                              target="_blank"
+                              href="mailto:Tramosas2023@gmail.com"
+                              className="colortxt footer__list-link ms-1"
+                            >
+                              Tramosas2023@gmail.com
+                            </a>
+                          </li>
+
+                          <li className="footer__list-item">
+                            <img
+                              className="text-danger"
+                              src={telefono}
+                              alt=""
+                            ></img>
+                            <a
+                              target="_blank"
+                              href="https://api.whatsapp.com/send?phone=573226178911"
+                              className="colortxt footer__list-link ms-1"
+                            >
+                              +57 3226178911
+                            </a>
                           </li>
                           <li className="footer__list-item">
                             <img
@@ -144,18 +172,13 @@ function Contact() {
                               src={telefono}
                               alt=""
                             ></img>
-                            <Link href="" className=" colortxt footer__list-link ms-1">
-                            +57 3235234567
-                            </Link>
-                            
-                          </li>
-                          <li className="footer__list-item">
-                            <img src={telefono} alt=""></img>
-
-                            <Link  href="" className="colortxt footer__list-link ms-1">
-                            +57 3235234567
-                            </Link>
-                            
+                            <a
+                              target="_blank"
+                              href="https://api.whatsapp.com/send?phone=573011800105"
+                              className="colortxt footer__list-link ms-1"
+                            >
+                              +57 3011800105
+                            </a>
                           </li>
                         </ul>
                       </div>
@@ -167,33 +190,49 @@ function Contact() {
                       className="contact-form-area wow fadeInUp mt-3 mt-lg-0"
                       data-wow-delay="500ms"
                     >
-                      <form  action="#" method="post">
+                      <form
+                        action="https://formspree.io/f/xdovrlwb"
+                        method="POST"
+                        className="needs-validation"
+                        novalidate
+                      >
                         <input
+                          name="Nombre"
                           type="text"
                           className="form-control"
-                          id="name"
-                          placeholder="Name"
+                          id="Nombre"
+                          placeholder="Nombre"
+                          required
                         ></input>
+                        
                         <input
+                          name="Email"
                           type="email"
                           className="form-control mt-2"
-                          id="email"
-                          placeholder="E-mail"
-                        ></input>
+                          id="Email"
+                          placeholder="Correo Electrónico"
+                          required
+                          ></input>
+                          
                         <input
-                          type="tel"
+                          name="Telefono"
+                          type="number"
                           className="form-control mt-2"
-                          id="number"
+                          id="Telefono"
                           placeholder="Numero de telefono"
-                        ></input>
+                          required
+                          ></input>
+                          
                         <textarea
-                          name="message"
+                          name="Menesaje"
                           className="form-control descripcion-pregunta my-2"
-                          id="message"
+                          id="Menesaje"
                           cols="30"
                           rows="7"
-                          placeholder="Message"
+                          placeholder="Menesaje..."
+                          required
                         ></textarea>
+                        
                         <button
                           className="btn btnhover direcciones  ultimocolor w-70  mt-30 p-2"
                           type="submit"
