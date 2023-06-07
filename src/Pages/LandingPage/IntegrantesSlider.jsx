@@ -2,7 +2,7 @@ import felipeD from "../../assets/Integrantes/Perfil_SF1-01.png";
 
 import jhon from "../../assets/Integrantes/JhonSF.png";
 import felipeS from "../../assets/Integrantes/SeguraSF.png";
-import carlos from "../../assets/Integrantes/carlos-01.png";
+
 import yonathan from "../../assets/Integrantes/YonatanSF.png";
 import hernan from "../../assets/Integrantes/HernanSF2.png";
 import facebook from "../../assets/icons/facebook.svg";
