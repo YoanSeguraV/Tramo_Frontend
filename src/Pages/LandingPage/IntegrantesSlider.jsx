@@ -75,7 +75,7 @@ function IntegrantesSlider() {
                 style={{ width: "18rem" }}
               >
                 <img
-                  src={carlos}
+                  
                   className="card-img-top m-auto d-block w-75  "
                   alt="..."
                 />
