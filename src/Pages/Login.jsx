@@ -78,9 +78,11 @@ function Login() {
             </div>
           </div>
           <div className="col-lg-6  contan1 d-flex align-items-end justify-content-end">
-            <picture className="d-flex mb-4 justify-content-end ">
-              <img src={login} width={"100%"} alt="" />
-            </picture>
+            <div className="d-flex mb-4 justify-content-end  ">
+              <picture className="d-flex mb-4 justify-content-end ">
+                <img src={login} width={"100%"} alt="" />
+              </picture>
+            </div>
           </div>
         </div>
       </div>
