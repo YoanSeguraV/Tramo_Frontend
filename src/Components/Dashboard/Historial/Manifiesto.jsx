@@ -6,9 +6,11 @@ import QRCode from "react-qr-code";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { NumeroALetras } from "./Num";
+import Swal from "sweetalert2";
 
 function Manifiesto() {
   const [manifiesto, setmanifiesto] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
   const [carga, setcarga] = useState({});
   const [destinatario, setdestinatario] = useState({});
   const [conductor, setconductor] = useState({});
@@ -46,8 +48,9 @@ function Manifiesto() {
       setcarga({ ...carga, valor, observaciones, pagoDescarga, pagoCarga });
       setusuario(usuario);
     };
+
     getManifiesto();
-  }, []);
+  }, [isLoading]);
 
   return (
     <>
@@ -510,6 +513,21 @@ function Manifiesto() {
             </td>
           </tr>
         </table>
+        <div className="d-flex justify-content-center mt-2">
+          {!isLoading ? (
+            <button
+              className="btn btn-primary w-50 "
+              onClick={() => {
+                setIsLoading(true);
+                setTimeout(() => {
+                  window.print();
+                }, 100); // Agrega un retraso de 100 ms antes de llamar a window.print()
+              }}
+            >
+              Descargar{" "}
+            </button>
+          ) : null}
+        </div>
       </div>
     </>
   );

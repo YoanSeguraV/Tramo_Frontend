@@ -1,9 +1,23 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { getPqrsId, udpatePqrs } from "../../../Data/Pqrs";
 
-function Modal() {
-  const [data, setdata] = useState("");
-  return (
+function Modal({ userId }) {
+  console.log(userId)
+  const [data, setData] = useState({});
+  const [respuesta, setrespuesta] = useState("")
+
+  useEffect(() => {
+    const loadData = async () => {
+      const response = await getPqrsId(userId);
+      setData(response);
+    };
+
+    if (userId) {
+      loadData();
+    }
+  }, [userId]);
+console.log(data.perfil)
+  return userId ? (
     <tr>
       <td>
         <div
@@ -21,6 +35,7 @@ function Modal() {
                 <h1 className="modal-title fs-5" id="mas-datosLabel">
                   Motivo P-Q-R-S{" "}
                 </h1>
+                <p>{data.motivo}</p>
                 <button
                   type="button"
                   className="btn-close"
@@ -29,14 +44,9 @@ function Modal() {
                 ></button>
               </div>
               <div className="modal-body">
-                {/* {data.motivoRechazoCON} */}
                 <p className="text-justify">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cupiditate laborum, ab odit maiores quidem numquam facere non
-                  autem, omnis eligendi quo reiciendis suscipit nulla officiis
-                  accusantium? Officiis voluptas culpa tempore.lorem Lorem
+                  {data.motivoRechazoCON}
                 </p>
-
                 <textarea
                   name=""
                   id=""
@@ -44,16 +54,16 @@ function Modal() {
                   rows="10"
                   className="p-2 w-100"
                   placeholder="Escribe La Respuesta..."
-                  onChange={(e) => setdata(e.target.value)}
+                  onChange={(e) => setrespuesta(e.target.value)}
                 ></textarea>
-                <button className="btn btn-primary w-100 my-1">Enviar</button>
+                <button onClick={()=>udpatePqrs(id,respuesta)} className="btn btn-primary w-100 my-1">Enviar</button>
               </div>
             </div>
           </div>
         </div>
       </td>
     </tr>
-  );
+  ) : null;
 }
 
 export default Modal;

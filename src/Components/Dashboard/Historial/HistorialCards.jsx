@@ -28,7 +28,7 @@ function HistorialCards() {
             {pedidoManifesto.id_conductor.nombreCON}
           </td>
           <td className="text_movil text-center pt-4">
-            {pedidoManifesto.carga.cantidadAproximada} toneladas
+            {pedidoManifesto.carga.cantidadAproximada} Kilos
           </td>
           <td className="text_movil filas_info_larga text-center pt-4">
             {pedidoManifesto.carga.cuidadoCarga}

@@ -32,6 +32,8 @@ export const updateSolicitudesPendientes = async (_id) => {
   try {
     const response = await axios.put(`${URL}admin/aceptarSoli/${_id}`);
     if (response.status === 200) {
+      location.reload()
+
       return response;
     }
   } catch (error) {
@@ -49,6 +51,7 @@ export const putSolicitudesRechazar = async (data) => {
       motivoRechazoCON,
     });
     if (response.status === 200) {
+      location.reload()
       return response;
     }
   } catch (error) {
